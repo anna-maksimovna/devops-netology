@@ -15,17 +15,17 @@ provider "yandex" {
 }
 
 locals {
-    core_type_map = {
+    core_map = {
         stage = 2
         prod = 4
     }
 
-    memory_count_map = {
+    memory_map = {
         stage = 4
         prod = 16
     }
 
-    instances = ["0", "1"]
+    instances = ("0", "1")
 }
 
 resource "yandex_compute_instance" "default" {
@@ -36,8 +36,8 @@ resource "yandex_compute_instance" "default" {
   zone        = "ru-central1-a"
 
   resources {
-    cores  = local.core_type_map[terraform.workspace]
-    memory = local.memory_type_map[terraform.workspace]
+    cores  = local.core_map[terraform.workspace]
+    memory = local.memory_map[terraform.workspace]
   }
 
   boot_disk {
