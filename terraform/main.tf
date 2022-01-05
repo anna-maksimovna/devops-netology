@@ -14,6 +14,7 @@ provider "yandex" {
   zone      = "${var.yc_zone}"
 }
 
-resource "yandex_compute_instance" "vm-1" {
-  name = "terraform1"
+resource "yandex_compute_image" "foo-image" {
+  name       = "my-custom-image"
+  source_url = "https://storage.yandexcloud.net/lucky-images/kube-it.img"
 }
