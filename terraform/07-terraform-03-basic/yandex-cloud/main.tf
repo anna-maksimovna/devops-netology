@@ -15,21 +15,21 @@ provider "yandex" {
 }
 
 locals {
-    core_map = {
-        stage = 2
-        prod = 4
-    }
+  core_map = {
+    stage = 2
+    prod  = 4
+  }
 
-    memory_map = {
-        stage = 4
-        prod = 16
-    }
+  memory_map = {
+    stage = 4
+    prod  = 16
+  }
 
-    instances = set("0", "1")
+  instances = ["0", "1", "2"]
 }
 
 resource "yandex_compute_instance" "default" {
-    for_each = local.instances
+  for_each = local.instances
 
   name        = "test"+each.value
   platform_id = "standard-v1"
@@ -60,6 +60,6 @@ resource "yandex_vpc_network" "foo" {}
 
 resource "yandex_vpc_subnet" "foo" {
   v4_cidr_blocks = ["10.2.0.0/16"]
-  zone       = "ru-central1-a"
-  network_id = "${yandex_vpc_network.foo.id}"
+  zone           = "ru-central1-a"
+  network_id     = "${yandex_vpc_network.foo.id}"
 }
