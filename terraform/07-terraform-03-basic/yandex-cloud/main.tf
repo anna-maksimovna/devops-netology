@@ -25,13 +25,13 @@ locals {
     prod  = 16
   }
 
-  instances = toset(["0", "1"])
+  instances = toset(["test0", "test1"])
 }
 
 resource "yandex_compute_instance" "default" {
   for_each = local.instances
 
-  name        = concat("test",each.value)
+  name        = each.value
   platform_id = "standard-v1"
   zone        = "ru-central1-a"
 
