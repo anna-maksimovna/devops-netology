@@ -1,15 +1,15 @@
 variable "yc_token" {
-    type = "string"
+    type = string
 }
 
 variable "yc_cloud_id" {
-    type = "string"
+    type = string
 }
 
 variable "yc_folder_id" {
-    type = "string"
+    type = string
 }
 
 variable "yc_zone" {
-    type = "string"
+    type = string
 }
