@@ -25,13 +25,13 @@ locals {
     prod  = 16
   }
 
-  instances = ["0", "1", "2"]
+  instances = toset(["0", "1"])
 }
 
 resource "yandex_compute_instance" "default" {
   for_each = local.instances
 
-  name        = "test"+each.value
+  name        = concat("test",each.value)
   platform_id = "standard-v1"
   zone        = "ru-central1-a"
 
@@ -52,7 +52,6 @@ resource "yandex_compute_instance" "default" {
 
   metadata = {
     foo      = "bar"
-    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 }
 
