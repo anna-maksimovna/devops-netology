@@ -11,4 +11,6 @@
 Делала для Yandex Cloud
 1. Packer
 2. Ссылка на [файлы конфигурации](https://github.com/anna-maksimovna/devops-netology/tree/main/terraform)
+
+
 ![ ](ter07_02.jpg)
