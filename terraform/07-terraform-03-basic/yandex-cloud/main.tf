@@ -25,7 +25,7 @@ locals {
         prod = 16
     }
 
-    instances = ("0", "1")
+    instances = "0", "1"
 }
 
 resource "yandex_compute_instance" "default" {
