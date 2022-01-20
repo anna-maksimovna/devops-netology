@@ -20,7 +20,7 @@ CMD ["Hey, netologyФ]
 
 * Ќаписанный вами Dockerfile
 
-**_—сылка на [докер-репо](https://github.com/anna-maksimovna/devops-netology/tree/main/dockerfiles/netology-ponysay)_**
+**_—сылка на [Dockerfile](https://github.com/anna-maksimovna/devops-netology/tree/main/dockerfiles/netology-ponysay)_**
 
 * —криншот вывода командной строки после запуска контейнера из вашего базового образа
 
