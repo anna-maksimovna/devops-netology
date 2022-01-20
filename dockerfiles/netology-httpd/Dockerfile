@@ -235,8 +235,8 @@ STOPSIGNAL SIGWINCH
 COPY httpd-foreground /usr/local/bin/
 
 EXPOSE 80
-RUN["httpd-foreground"]
-RUN["bash"]
+CMD["httpd-foreground"]
+ENTRYPOINT["bash"]
 RUN echo "<html><head>Hey, Netology</head><body><h1>I&#039;m kinda DevOps now</h1></body></html>" >> index.html
 CMD	["cat", "index.html"]
  
