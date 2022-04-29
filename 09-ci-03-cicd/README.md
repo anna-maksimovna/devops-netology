@@ -13,11 +13,14 @@
 
 ### Знакомство с Nexus
 
-[maven-metadata.xml]()
+[maven-metadata.xml](https://github.com/anna-maksimovna/devops-netology/blob/main/09-ci-03-cicd/maven-metadata.xml)
 
 ### Знакомство с Maven
 
-[Гитлаб репозиторий]()
+[Гитлаб репозиторий](https://github.com/anna-maksimovna/devops-netology/blob/main/09-ci-03-cicd/mvn/pom.xml)
+
+
+
 
 > #### Подготовка к выполнению
 > Создаём 2 VM в yandex cloud со следующими параметрами: 2CPU 4RAM Centos7(остальное по минимальным требованиям)
