@@ -43,7 +43,9 @@ kubectl get pods -n test-ns
 Залила на виртуальную машину 3 файла для настройки юзера и его прав:
 
 [serviceaccount.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/12-kubernetes-02-commands/serviceaccount.yaml)
+
 [role.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/12-kubernetes-02-commands/role.yaml)
+
 [rolebinding.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/12-kubernetes-02-commands/rolebinding.yaml)
 
 Создала описанные ресурсы:
