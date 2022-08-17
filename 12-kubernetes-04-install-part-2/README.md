@@ -38,7 +38,7 @@ declare -a IPS=(51.250.29.0 84.252.143.68 51.250.110.181)
 CONFIG_FILE=inventory/mycluster/hosts.yaml python3 contrib/inventory_builder/inventory.py ${IPS[@]}
 ```
 
-ќтредактировала hosts.yaml т.к. сгенерилс€ какой-то странный, назвала ноды по другому и скомпановала так, чтобы была одна мастер-нода и 2 рабочих. 
+ќтредактировала [hosts.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/12-kubernetes-04-install-part-2/mycluster/hosts.yaml) т.к. сгенерилс€ какой-то странный, назвала ноды по другому и скомпановала так, чтобы была одна мастер-нода и 2 рабочих. 
 
 «апускаем развертывание кластера:
 ```
