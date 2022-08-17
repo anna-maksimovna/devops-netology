@@ -55,9 +55,6 @@ kubectl get nodes
 ```
 
 Команда выдала ошибку:
-```
-The connection to the server localhost:8080 was refused - did you specify the right host or port?
-```
 
 ![ ](kub12_04_02.png)
 
