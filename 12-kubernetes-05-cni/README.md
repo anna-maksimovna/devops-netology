@@ -28,7 +28,7 @@ kubectl get deployments -n test-ns
 
 ![ ](kub12_05_01.png)
 
-Подготовили файл с сетевыми политиками networkpolicy.yaml
+Подготовили файл с сетевыми политиками [networkpolicy.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/12-kubernetes-05-cni/networkpolicy.yaml)
 
 Применяем NetworkPolicy:
 ```
