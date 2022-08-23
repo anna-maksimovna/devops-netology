@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress
+  namespace: stage-ns
+spec:
+  ports:
+    - name: web
+      port: 80
+      protocol: TCP
+    - name: api
+      port: 9000
+      protocol: TCP
+  selector:
+    app: custom-app
+  type: ClusterIP

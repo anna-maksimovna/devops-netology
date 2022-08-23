@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-app
+  namespace: stage-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-app
+  template:
+    metadata:
+      labels:
+        app: custom-app
+    spec:
+      containers:
+      - image: anutkafluff/13-1kubernetes-config_backend:latest
+        name: back
+        ports:
+        - containerPort: 9000
+      - image: anutkafluff/13-1-kubernetes-config_frontend:latest
+        name: front
+        ports:
+        - containerPort: 80
