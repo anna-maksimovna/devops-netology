@@ -16,7 +16,7 @@
 Собирала проект локально и запушила образы на dockerhub.
 Запустила миникуб с лекции 12.1 и в нем применяла манифесты.
 
-deployment.yaml
+[deployment.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/stage/deployment.yaml)
 ```
 ---
 apiVersion: apps/v1
@@ -46,7 +46,7 @@ spec:
 
 ```
 
-statefulset.yaml
+[statefulset.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/stage/statefulset.yaml)
 ```
 ---
 apiVersion: apps/v1
@@ -83,7 +83,7 @@ spec:
 
 ```
 
-service_bd.yaml
+[service_bd.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/stage/service_bd.yaml)
 ```
 ---
 apiVersion: v1
@@ -102,7 +102,7 @@ spec:
 
 ```
 
-service_ingress.yaml
+[service_ingress.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/stage/service_ingress.yaml)
 
 ```
 apiVersion: v1
@@ -154,7 +154,7 @@ kubectl get svc -n stage-ns
 
 Подготовила манифесты для прода:
 
-back-deployment.yaml
+[back-deployment.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/prod/back-deployment.yaml)
 ```
 ---
 apiVersion: apps/v1
@@ -183,7 +183,7 @@ spec:
 
 ```
 
-front-deployment.yaml
+[front-deployment.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/prod/front-deployment.yaml)
 ```
 ---
 apiVersion: apps/v1
@@ -210,7 +210,7 @@ spec:
           - name: BASE_URL
             value: http://back:9000
 ```
-statefulset.yaml
+[statefulset.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/prod/statefulset.yaml)
 ```
 ---
 apiVersion: apps/v1
@@ -245,7 +245,7 @@ spec:
       volumes:
         - name: postgres-volume
 ```
-back-service.yaml
+[back-service.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/prod/back-service.yaml)
 ```
 ---
 apiVersion: v1
@@ -263,7 +263,7 @@ spec:
       protocol: TCP
 
 ```
-front-service.yaml
+[front-service.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/prod/front-service.yaml)
 ```
 ---
 apiVersion: v1
@@ -281,7 +281,7 @@ spec:
       protocol: TCP
 
 ```
-postgresql-service.yaml
+[postgresql-service.yaml](https://github.com/anna-maksimovna/devops-netology/blob/main/13-kubernetes-config-01-objects/prod/postgresql-service.yaml)
 ```
 ---
 apiVersion: v1
