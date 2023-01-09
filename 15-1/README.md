@@ -19,7 +19,8 @@
 * Создать в этой приватной подсети виртуалку с внутренним IP, подключиться к ней через виртуалку, созданную ранее и убедиться что есть доступ к интернету
 
 Подготовила файлы конфигурации:
-main.tf
+
+[main.tf](https://github.com/anna-maksimovna/devops-netology/blob/main/15-1/terraform/main.tf)
 ```
 terraform {
   required_providers {
@@ -68,7 +69,7 @@ resource "yandex_vpc_subnet" "private" {
 ```
 
 
-nat.tf
+[nat.tf](https://github.com/anna-maksimovna/devops-netology/blob/main/15-1/terraform/nat.tf)
 ```
 resource "yandex_compute_instance" "nat-instance" {
   name     = "nat-instance"
@@ -101,7 +102,7 @@ resource "yandex_compute_instance" "nat-instance" {
 }
 ```
 
-outputs.tf
+[outputs.tf](https://github.com/anna-maksimovna/devops-netology/blob/main/15-1/terraform/outputs.tf)
 ```
 output "public_vm_ip" {
   value = yandex_compute_instance.public-vm.network_interface.0.nat_ip_address
@@ -112,7 +113,7 @@ output "private_vm_ip" {
 }
 ```
 
-vm.tf
+[vm.tf](https://github.com/anna-maksimovna/devops-netology/blob/main/15-1/terraform/vm.tf)
 ```
 data "yandex_compute_image" "ubuntu-2004" {
   family = "ubuntu-2004-lts"
@@ -177,7 +178,7 @@ resource "yandex_compute_instance" "private-vm" {
 }
 ```
 
-variables.tf
+[variables.tf](https://github.com/anna-maksimovna/devops-netology/blob/main/15-1/terraform/variables.tf)
 ```
 variable "yc_token" {
     type = string
